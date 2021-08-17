@@ -1,0 +1,68 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  background: #ffffff;
+}
+
+.wrapper {
+  position: relative;
+}
+.wrapper .clearfix {
+  clear: both;
+  display: table;
+  content: "";
+}
+.wrapper .diamond-list {
+  margin: 150px auto 0 auto;
+}
+.wrapper .diamond-list::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+.wrapper .diamond-list ul {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  display: table;
+}
+.wrapper .diamond-list ul li {
+  margin: 0;
+  padding: 12px 20px;
+  list-style-type: none;
+  background: #f49d0b;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  text-align: center;
+  text-decoration: none;
+  float: left;
+}
+.wrapper .diamond-list ul li.border-radius {
+  border-radius: 20px 20px 0 0 !important;
+}
+.wrapper .diamond-list ul li.border-radius-2 {
+  border-radius: 20px 0 0 20px !important;
+}
+.wrapper .diamond-list ul li.border-radius-3 {
+  border-radius: 0px 20px 20px 0px !important;
+}
+.wrapper .diamond-list ul li.border-radius-4 {
+  border-radius: 0px 0px 0px 20px !important;
+}
+.wrapper .diamond-list ul li.border-radius-5 {
+  border-radius: 0px 0px 20px 0px !important;
+}
+.wrapper .diamond-list ul li.border-radius-6 {
+  border-radius: 0px 0px 20px 20px !important;
+}
+.wrapper .diamond-list ul li:first-child {
+  border-radius: 20px 0px 0 0;
+}
+.wrapper .diamond-list ul li:last-child {
+  border-radius: 0px 20px 0 0px;
+}
+.inputValue {
+  margin: 0px 10px;
+}

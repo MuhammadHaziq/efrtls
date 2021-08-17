@@ -1,0 +1,106 @@
+/// Veriable
+
+$width: 100%;
+$body-color: #ffffff;
+$primary-color: #000000;
+$secondary-color: #f49d0b;
+$border-color: #e1e7ef;
+
+/// mixin
+@mixin radius($radius) {
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background: $body-color;
+}
+.wrapper {
+  position: relative;
+
+  .clearfix {
+    clear: both;
+    display: table;
+    content: "";
+  }
+
+  .diamond-list {
+    margin: 100px auto 0 auto;
+
+    &::after {
+      clear: both;
+      display: table;
+      content: "";
+    }
+
+    ul {
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+      display: table;
+
+      li {
+        margin: 0;
+        padding: 12px 20px;
+        list-style-type: none;
+        background: $secondary-color;
+        color: $primary-color;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        text-align: center;
+        text-decoration: none;
+        float: left;
+
+        &.border-radius {
+          @include radius(20px 20px 0 0 !important);
+        }
+        &.border-radius-2 {
+          @include radius(20px 0 0 20px !important);
+        }
+        &.border-radius-3 {
+          @include radius(0px 20px 20px 0px !important);
+        }
+        &.border-radius-4 {
+          @include radius(0px 0px 0px 20px !important);
+        }
+        &.border-radius-5 {
+          @include radius(0px 0px 20px 0px !important);
+        }
+        &.border-radius-6 {
+          @include radius(0px 0px 20px 20px !important);
+        }
+
+        &:first-child {
+          @include radius(20px 0px 0 0);
+        }
+        &:last-child {
+          @include radius(0px 20px 0 0px);
+        }
+      }
+    }
+  }
+
+  .set-the-value {
+    background-color: $body-color;
+    @include radius(10px);
+    border: 1px solid $border-color;
+    padding: 20px;
+    max-width: 300px;
+    width: $width;
+    margin: 100px auto 0 auto;
+    text-align: center;
+    -webkit-box-shadow: 7px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 7px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 7px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .inputValue {
+    margin: 0px 10px;
+  }
+}
